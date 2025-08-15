@@ -5,8 +5,9 @@ const port = 3000;
 
 app.use(express.json());
 
-app.get('/', (req,res ) =>
-  res.send('Hola mundo bienvenido a la calculadora'));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 app.get('/inicio', (req, res) => {
   res.sendFile(path.join(__dirname, 'inicio.html'));
